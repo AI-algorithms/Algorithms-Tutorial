@@ -84,7 +84,7 @@
  * [无监督神经元](https://blog.openai.com/unsupervised-sentiment-neuron/)
 
 ### 机器学习
-觉得此文章不错可以给我star！
+觉得此文章不错可以star下，也可以加我的微信Sen0676,加入我们一起交流算法和机器学习！
 
 
 ### License
