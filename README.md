@@ -31,7 +31,7 @@
 
 #### 机器学习算法概览
 <p align="center">
-<img width="100%" align="center" src="" />
+<img width="100%" align="center" src="https://github.com/KeKe-Li/tutorial/blob/master/assets/images/overview.png" />
 </p>
 
 从2016年起，机器学习有了新的突破和发展。但是，有效的机器学习是困难的，因为机器学习本身就是一个交叉学科，没有科学的方法及一定的积累很难入门。
