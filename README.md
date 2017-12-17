@@ -27,8 +27,6 @@
  * [深度学习的应用案例]()
  * [深度学习所需要的数据]()
 
-
-
 #### 机器学习算法概览
 <p align="center">
 <img width="100%" align="center" src="https://github.com/KeKe-Li/tutorial/blob/master/assets/images/overview.png" />
