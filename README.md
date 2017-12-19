@@ -44,7 +44,7 @@
  * [粗糙集](https://github.com/KeKe-Li/tutorial/blob/master/assets/src/RST/RST.md)
  * [孤立点分析](https://github.com/KeKe-Li/tutorial/blob/master/assets/src/OTR/OTR.md)
  * [CART](https://github.com/KeKe-Li/tutorial/blob/master/assets/src/CART/CART.md)
- * [EM]()
+ * [EM](https://github.com/KeKe-Li/tutorial/blob/master/assets/src/EM/EM.md)
  * [FP—tree]()
  * [GSP序列]()
  * [协同过滤]()
