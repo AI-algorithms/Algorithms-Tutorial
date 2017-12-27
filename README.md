@@ -79,6 +79,7 @@
  * [梯度下降](https://github.com/KeKe-Li/book/blob/master/AI/%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D.pdf)
  * [机器学习](https://blog.openai.com/robots-that-learn/)
  * [无监督神经元](https://blog.openai.com/unsupervised-sentiment-neuron/)
+ * [机器学习概述](https://feisky.xyz/machine-learning/basic/)
 
 ### 机器学习
 觉得此文章不错可以star下，也可以加我的微信Sen0676,加入我们一起交流算法和机器学习！
