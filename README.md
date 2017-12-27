@@ -80,6 +80,7 @@
  * [机器学习](https://blog.openai.com/robots-that-learn/)
  * [无监督神经元](https://blog.openai.com/unsupervised-sentiment-neuron/)
  * [机器学习概述](https://feisky.xyz/machine-learning/basic/)
+ * [tensorflow实践](https://tensorflow.feisky.xyz/install/cpu.html)
 
 ### 机器学习
 觉得此文章不错可以star下，也可以加我的微信Sen0676,加入我们一起交流算法和机器学习！
