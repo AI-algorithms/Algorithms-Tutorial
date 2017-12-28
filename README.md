@@ -80,7 +80,7 @@
  * [机器学习](https://blog.openai.com/robots-that-learn/)
  * [tensorflow实践](https://tensorflow.feisky.xyz/install/cpu.html)
  * [无监督神经元](https://blog.openai.com/unsupervised-sentiment-neuron/)
- * [机器学习概述](https://feisky.xyz/machine-learning/basic/)
+ * [机器学习概述](https://feisky.xyz/machine-learning/)
 
 
 ### 机器学习
