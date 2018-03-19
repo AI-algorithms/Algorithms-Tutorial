@@ -30,18 +30,45 @@ GRUB_GFXMODE=1024x768
 ```bash
 sudo update-grub
 ```
+* 安装SSH Server，这样可以远程ssh访问这台GTX1080主机：
+```bash
+sudo apt-get install openssh-server
+```
+* 更新Ubuntu16.04源，可以选用的是[中科大的源](https://lug.ustc.edu.cn/wiki/mirrors/help/ubuntu):
+```bash
+cd /etc/apt/
+sudo cp sources.list sources.list.bak
+sudo vi sources.list
+```
+把下面的这些源添加到source.list文件头部：
+```bash
+deb http://mirrors.ustc.edu.cn/ubuntu/ xenial main restricted universe multiverse
+deb http://mirrors.ustc.edu.cn/ubuntu/ xenial-security main restricted universe multiverse
+deb http://mirrors.ustc.edu.cn/ubuntu/ xenial-updates main restricted universe multiverse
+deb http://mirrors.ustc.edu.cn/ubuntu/ xenial-proposed main restricted universe multiverse
+deb http://mirrors.ustc.edu.cn/ubuntu/ xenial-backports main restricted universe multiverse
+deb-src http://mirrors.ustc.edu.cn/ubuntu/ xenial main restricted universe multiverse
+deb-src http://mirrors.ustc.edu.cn/ubuntu/ xenial-security main restricted universe multiverse
+deb-src http://mirrors.ustc.edu.cn/ubuntu/ xenial-updates main restricted universe multiverse
+deb-src http://mirrors.ustc.edu.cn/ubuntu/ xenial-proposed main restricted universe multiverse
+deb-src http://mirrors.ustc.edu.cn/ubuntu/ xenial-backports main restricted universe multiverse
+```
 * 更新系统软件
 ```bash
 sudo apt-get update  #update是更新软件列表
 sudo apt-get upgrade #upgrade是更新软件
 ```
+3. 安装GTX1080驱动
 
-* 安装SSH Server，这样可以远程ssh访问这台GTX1080主机：
 ```bash
-sudo apt-get install openssh-server
+sudo apt-get update
+sudo apt-get install nvidia-367
+sudo apt-get install mesa-common-dev
+sudo apt-get install freeglut3-dev
 ```
+在系统设置->软件更新->附加驱动->选择nvidia最新驱动(361)->应用更改.
 
-3.安装CUDA 8.0
+4. 安装CUDA 8.0
 CUDA Toolkit 9.1 Download: https://developer.nvidia.com/cuda-downloads
 
 注意：
