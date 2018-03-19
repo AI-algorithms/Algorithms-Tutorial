@@ -100,8 +100,18 @@ export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/local/cuda/lib64:/usr/local/cuda/e
 
 cuDNN 下载:https://developer.nvidia.com/cudnn
 * 下载需要填写一个调查问卷，就三个选项，建议认真填写。
-* 填写完毕点击 I Agree To 前面的小方框，出现如下:
+* 填写完毕点击 I Agree To 前面的小方框。
 
+```bash
+tar xvzf cudnn-8.0-linux-x64-v5.1-ga.tgz
+sudo cp cuda/include/cudnn.h /usr/local/cuda/include
+sudo cp cuda/lib64/libcudnn* /usr/local/cuda/lib64
+sudo chmod a+r /usr/local/cuda/include/cudnn.h /usr/local/cuda/lib64/libcudnn*
+```
+添加环境变量
+```bash
+export CUDA_HOME=/usr/local/cuda
+```
 
 6. 安装Tensorflow
 
@@ -117,3 +127,64 @@ tensorflow github上面提到4种安装方式:
 ```bash
 docker run -it -p 3000:3000 gcr.io/tensorflow/tensorflow
 ```
+7. 安装pip3
+
+```bash
+sudo apt-get install python3-pip
+```
+查看版本:
+```bash
+pip3 --version
+```
+8. 安装Bazel
+
+```bash
+echo "deb [arch=amd64] http://storage.googleapis.com/bazel-apt stable jdk1.8" | sudo tee /etc/apt/sources.list.d/bazel.list
+curl https://bazel.build/bazel-release.pub.gpg | sudo apt-key add -
+sudo apt-get update && sudo apt-get install bazel
+```
+9. 安装依赖库
+
+```bash
+# Python 2.7
+sudo apt-get install python-numpy python-dev python-pip python-wheel
+# Python 3.x
+sudo apt-get install python3-numpy python3-dev python3-pip python3-wheel
+```
+10. 编译安装
+下载Tensorflow: https://github.com/tensorflow/tensorflow
+```bash
+cd tensorflow
+./configure
+```
+安装命令行提示，逐个设置编译选项（可以选择默认值）
+* 编译CPU版：
+```bash
+bazel build --config=opt //tensorflow/tools/pip_package:build_pip_package
+```
+* 编译GPU版：
+```bash
+bazel build --config=opt --config=cuda //tensorflow/tools/pip_package:build_pip_package
+```
+注意，GCC 5需要设置--cxxopt="-D_GLIBCXX_USE_CXX11_ABI=0"选项。
+
+bazel build会生成一个build_pip_package命令，用来生成python whl包:
+```bash
+# 编译生成python whl包
+bazel-bin/tensorflow/tools/pip_package/build_pip_package /tmp/tensorflow_pkg
+```
+最后，安装生成的包
+```bash
+sudo pip install /tmp/tensorflow_pkg/tensorflow-1.2.0-py2-none-any.whl
+```
+11.最后验证安装
+```python
+$ python
+>>> import tensorflow as tf
+>>> hello = tf.constant('Hello, TensorFlow!')
+>>> sess = tf.Session()
+>>> print(sess.run(hello))
+Hello, TensorFlow!
+>>>
+```
+到这里机器学习环境已经安装成功了，接下来开始我们的机器学习之旅吧！
