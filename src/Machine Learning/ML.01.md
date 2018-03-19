@@ -13,7 +13,7 @@
 * 镜像地址 https://www.ubuntu.com/download/alternative-downloads 
 
 <p align="center">
-<img width="500" align="center" src="../images/6.jpg" />
+<img width="600" align="center" src="../images/6.jpg" />
 </p>
 
 * 安装完毕后Ubuntu 16.04的分辨率很低，在显卡驱动未安装之前，可以手动修改一下grub文件：
@@ -77,7 +77,7 @@ CUDA Toolkit 9.1 Download: https://developer.nvidia.com/cuda-downloads
 * 下载需要注册。
 
 <p align="center">
-<img width="500" align="center" src="../images/7.jpg" />
+<img width="600" align="center" src="../images/7.jpg" />
 </p>
 下载的“sh cuda_9.1.85_387.26_linux.run”有1.6G，按照Nivdia官方给出的方法安装CUDA8：
 
