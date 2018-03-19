@@ -10,8 +10,20 @@
 2. 系统环境
 这里我安装的是Ubuntu 17.10.1。
 
- 镜像地址 https://www.ubuntu.com/download/alternative-downloads 
+镜像地址 https://www.ubuntu.com/download/alternative-downloads 
 
 <p align="center">
 <img width="500" align="center" src="../images/6.jpg" />
+</p>
+
+3.安装CUDA 8.0
+CUDA Toolkit 9.1 Download: https://developer.nvidia.com/cuda-downloads
+
+注意：
+* 这个需要在NVIDIA的CUDA下载页面下，选择要使用的CUDA版本进行下载。 
+* 选择自己系统对应的安装
+* 下载需要注册。
+
+<p align="center">
+<img width="500" align="center" src="../images/7.jpg" />
 </p>
