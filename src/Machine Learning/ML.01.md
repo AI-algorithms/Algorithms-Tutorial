@@ -87,8 +87,33 @@ sudo sh cuda_8.0.27_linux.run --tmpdir=/opt/temp/
 执行后会有一系列提示让你确认，关键的地方是是否安装361这个低版本的驱动:
 
 ```bash
-sudo apt-get update
-sudo apt-get install nvidia-367
-sudo apt-get install mesa-common-dev
-sudo apt-get install freeglut3-dev
+Install NVIDIA Accelerated Graphics Driver for Linux-x86_64 361.62 
+```
+答案必须是N，否则之前安装的GTX1080驱动就白费了.
+
+* 安装完毕后，再声明一下环境变量，并将其写入到 ~/.bashrc 的尾部:
+
+```bash
+export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/local/cuda/lib64:/usr/local/cuda/extras/CUPTI/lib64"
+```
+5. 安装cuDNN 
+
+cuDNN 下载:https://developer.nvidia.com/cudnn
+* 下载需要填写一个调查问卷，就三个选项，建议认真填写。
+* 填写完毕点击 I Agree To 前面的小方框，出现如下:
+
+
+6. 安装Tensorflow
+
+Tensorflow 下载:https://github.com/tensorflow/tensorflow.
+
+tensorflow github上面提到4种安装方式:
+* Virtualenv installation 
+* Anaconda installation 
+* Docker installation 
+* Installing from sources 
+
+这里我选择Docker去安装:
+```bash
+docker run -it -p 3000:3000 gcr.io/tensorflow/tensorflow
 ```
