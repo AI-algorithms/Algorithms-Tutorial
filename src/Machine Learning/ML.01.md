@@ -79,3 +79,16 @@ CUDA Toolkit 9.1 Download: https://developer.nvidia.com/cuda-downloads
 <p align="center">
 <img width="500" align="center" src="../images/7.jpg" />
 </p>
+下载的“sh cuda_9.1.85_387.26_linux.run”有1.6G，按照Nivdia官方给出的方法安装CUDA8：
+
+```bash
+sudo sh cuda_8.0.27_linux.run --tmpdir=/opt/temp/
+```
+执行后会有一系列提示让你确认，关键的地方是是否安装361这个低版本的驱动:\
+
+```bash
+sudo apt-get update
+sudo apt-get install nvidia-367
+sudo apt-get install mesa-common-dev
+sudo apt-get install freeglut3-dev
+```
