@@ -84,7 +84,7 @@ CUDA Toolkit 9.1 Download: https://developer.nvidia.com/cuda-downloads
 ```bash
 sudo sh cuda_8.0.27_linux.run --tmpdir=/opt/temp/
 ```
-执行后会有一系列提示让你确认，关键的地方是是否安装361这个低版本的驱动:\
+执行后会有一系列提示让你确认，关键的地方是是否安装361这个低版本的驱动:
 
 ```bash
 sudo apt-get update
