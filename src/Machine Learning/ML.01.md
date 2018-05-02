@@ -8,6 +8,7 @@
 * 软件： ubuntu16.04+cuda8.0+cudnn v5+tensorflow 0.11
 
 2. 系统环境
+
 * 这里我安装的是Ubuntu 17.10.1。
 
 * 镜像地址 https://www.ubuntu.com/download/alternative-downloads 
