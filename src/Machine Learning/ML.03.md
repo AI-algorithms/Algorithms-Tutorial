@@ -3,9 +3,9 @@
 #### 机器学习的框架
  * [Theano](#Theano) 
  * [Lasagne](#Lasagne) 
- * [Blocks]() 
- * [TensorFlow]() 
- * [Keras]() 
+ * [Blocks](#Blocks) 
+ * [TensorFlow](#TensorFlow) 
+ * [Keras](#Keras) 
  * [MXNet]() 
  * [PyTorch]()    
  * [Caffe]() 
@@ -30,6 +30,32 @@ Theano 是一个Python 库，允许你定义、优化并且有效地评估涉及
 优点：仍旧非常灵活，比 Theano更高级的抽象，文档和代码中包含了各种 Pasta Puns。
 
 缺点：社区小。
+
+#### Blocks
+
+Blocks用于构建和训练神经网络的 Theano框架。与 Lasagne类似，Blocks 是在 Theano 顶部添加一个抽象层使深度学习模型比编写原始的 Theano更清晰、更简单、定义更加标准化。它是由蒙特利尔大学机器学习研究所（MILA）编写，其中一些人为搭建Theano 和第一个神经网络定义的高级接口（已经淘汰的PyLearn2）贡献了自己的一份力量。比起Lasagne，Blocks灵活一点，代价是入门台阶较高，想要高效的使用它有不小的难度。除此之外，Blocks对递归神经网络架构（recurrent neural network architectures）有很好的支持，所以如果有兴趣探索这种类型的模型，它值得一看。
+
+优点：仍旧非常灵活，比 Theano更高级的抽象，易于测试。
+
+缺点：较高的学习难度，更小的社区。
+
+
+#### TensorFlow
+
+TensorFlow用于数值计算的使用数据流图的开源软件库。TensorFlow 是较低级别的符号库（比如 Theano）和较高级别的网络规范库（比如Blocks 和Lasagne）的混合。虽然它是Python 深度学习库集合的最新成员，不过在Google Brain 团队支持下，它已经是最大的活跃社区了。它支持在多GPUs 上运行深度学习模型，为高效的数据流水线提供使用程序，并具有用于模型的检查，可视化和序列化的内置模块。且TensorFlow支持 Keras（一个很优秀的深度学习库）。
+
+优点：由软件巨头 Google支持，非常大的社区，低级和高级接口网络训练，比基于 Theano配置更快的模型编译，完全地多 GPU支持。
+
+缺点：虽然 Tensorflow正在追赶，但是在许多基准上比基于 Theano的慢，RNN支持仍不如 Theano。
+
+
+#### Keras
+
+Python 的深度学习库。支持Convnets（基于GPU实现的卷积神经网络）、递归神经网络等。在Theano 或者TensorFlow 上运行。Keras 也许是水平最高，对用户最友好的库了。由 Francis Chollet（Google Brain团队中的另一个成员）编写和维护。它允许用户选择其所构建的模型是在 Theano上或是在 TensorFlow上的符号图上执行。Keras的用户界面受启发于 Torch。由于部分非常优秀的文档和其相对易用性，Keras的社区非常大并且非常活跃。TensorFlow已经与 Keras一起支持内置，所以很快 Keras将是 TensorFlow项目的一个分组。
+
+优点：可供选择的 Theano或者 TensorFlow后端，直观、高级别的端口，更易学习。
+
+缺点：Keras缺点是不太灵活。
  
 
 ####  卷积神经网络（Convolutional Neural Network，CNN）
@@ -47,32 +73,6 @@ RNN神经网络是一种节点定向连接成环的人工神经网络。网络�
  一个用Python实现的科学计算包，是Python的一种开源数值计算扩展，包括：1、一个强大的N维数组对象Array；2、比较成熟的（广播）函数库；3、用于整合C/C++和Fortran代码的工具包；4、实用的线性代数、傅里叶变换和随机数生成函数。提供了许多高级的数值编程工具，可用来存储和处理大型矩阵，如矩阵数据类型、矢量处理、以及精密的运算库，是专为进行严格的数字处理而产生。基本可以认为NumPy将Python变成了一种免费的更强大的MatLab系统。
 
 
-
- 
-
-#### Blocks
-
-Blocks用于构建和训练神经网络的 Theano框架。与 Lasagne类似，Blocks 是在 Theano 顶部添加一个抽象层使深度学习模型比编写原始的 Theano更清晰、更简单、定义更加标准化。它是由蒙特利尔大学机器学习研究所（MILA）编写，其中一些人为搭建Theano 和第一个神经网络定义的高级接口（已经淘汰的PyLearn2）贡献了自己的一份力量。比起Lasagne，Blocks灵活一点，代价是入门台阶较高，想要高效的使用它有不小的难度。除此之外，Blocks对递归神经网络架构（recurrent neural network architectures）有很好的支持，所以如果有兴趣探索这种类型的模型，它值得一看。
-
-优点：仍旧非常灵活，比 Theano更高级的抽象，易于测试。
-
-缺点：较高的学习难度，更小的社区。
-
-#### TensorFlow
-
-TensorFlow用于数值计算的使用数据流图的开源软件库。TensorFlow 是较低级别的符号库（比如 Theano）和较高级别的网络规范库（比如Blocks 和Lasagne）的混合。虽然它是Python 深度学习库集合的最新成员，不过在Google Brain 团队支持下，它已经是最大的活跃社区了。它支持在多GPUs 上运行深度学习模型，为高效的数据流水线提供使用程序，并具有用于模型的检查，可视化和序列化的内置模块。且TensorFlow支持 Keras（一个很优秀的深度学习库）。
-
-优点：由软件巨头 Google支持，非常大的社区，低级和高级接口网络训练，比基于 Theano配置更快的模型编译，完全地多 GPU支持。
-
-缺点：虽然 Tensorflow正在追赶，但是在许多基准上比基于 Theano的慢，RNN支持仍不如 Theano。
-
-#### Keras
-
-Python 的深度学习库。支持Convnets（基于GPU实现的卷积神经网络）、递归神经网络等。在Theano 或者TensorFlow 上运行。Keras 也许是水平最高，对用户最友好的库了。由 Francis Chollet（Google Brain团队中的另一个成员）编写和维护。它允许用户选择其所构建的模型是在 Theano上或是在 TensorFlow上的符号图上执行。Keras的用户界面受启发于 Torch。由于部分非常优秀的文档和其相对易用性，Keras的社区非常大并且非常活跃。TensorFlow已经与 Keras一起支持内置，所以很快 Keras将是 TensorFlow项目的一个分组。
-
-优点：可供选择的 Theano或者 TensorFlow后端，直观、高级别的端口，更易学习。
-
-缺点：不太灵活。
 
 #### MXNet
 
