@@ -17,6 +17,7 @@
  * [NumPy](#NumPy)
  
 #### Theano
+
 Theano 是一个Python 库，允许你定义、优化并且有效地评估涉及到多维数组的数学表达式。Theano 是数值计算的主力，它支持了许多其他的深度学习框架。Theano由 Frédéric Bastien创建，这是蒙特利尔大学机器学习研究所（MILA）背后的一个非常优秀的研究团队。它的API 水平较低，并且为了写出效率高的Theano，需要对隐藏在其他框架幕后的算法相当的熟悉。如果有着丰富的学术机器学习知识，正在寻找模型的精细控制方法，或者想要实现一个新奇的或不同寻常的模型，Theano是首选库。为了灵活性，Theano牺牲了易用性。
 
 优点：灵活，正确使用时的高性能。
@@ -59,7 +60,6 @@ Python 的深度学习库。支持Convnets（基于GPU实现的卷积神经网�
 
 MXNet是一个旨在提高效率和灵活性的深度学习框架。MXNet是亚马逊（Amazon）选择的深度学习库，也许是最优秀的库。它拥有类似于Theano 和TensorFlow 的数据流图，架构设计得可以利用更多内存复用机会和为多GPU 配置提供了良好的配置，有着类似于Lasagne 和Blocks 更高级别的模型构建块，并且可以在你可以想象的任何硬件上运行（包括手机）。对Python 的支持只是其冰山一角——MXNet同样提供了对 R、Julia、C++、Scala、Matlab和Javascript 的接口。
 
-
 #### PyTorch
 
 Python 中的张量（Tensors）和动态神经网络，有着强大的GPU 加速。PyTorch 也是Python 深度学习框架列表中的一个新成员。它是从Lua 的Torch 库到Python 的松散端口，由Facebook 的人工智能研究团队（Artificial Intelligence Research team (FAIR)）支持且因为它较早支持用于处理动态计算图，也是非常优秀的一款深度学习框架。
@@ -83,7 +83,6 @@ CNTK 是微软的开源深度学习框架，是「Computational Network Toolkit�
 优点：丰富的 RNN教程和预构建模型。
 
 缺点：社区小，新手级资料少。
-
 
 #### Neon
 
@@ -153,9 +152,7 @@ Caffe 也发布了一些预训练模型/权重（model zoo），能够作为初�
 
 基于Theano的架构库可以说是最多的，Keras、Lasagne、blocks就是成功的案例。而TensorFlow是较低级别的符号库（比如Theano）和较高级别的网络规范库（比如Blocks 和Lasagne）的混合，且兼容Keras，良好的设计使得图像、队列、图像增加器等能成为更高级包装的有用构造块。
 
- 
-
- 通过对比其他机器学习框架我们之后，我们在看看各个机器学习框架对语言和平台的支持情况：
+通过对比其他机器学习框架我们之后，我们在看看各个机器学习框架对语言和平台的支持情况：
 
 MXNet：真正的跨平台，语言支持丰富。
 
@@ -190,12 +187,4 @@ MXNet、TensorFlow、PyTorch、Theano。
 MXNet、Theano、TensorFlow、PyTorch。
 
 
-    
-
-    
-
-    
-
-    
-
-    
+   
